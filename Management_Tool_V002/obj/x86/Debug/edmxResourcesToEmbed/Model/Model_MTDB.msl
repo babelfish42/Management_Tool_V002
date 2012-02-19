@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MTDBModelStoreContainer" CdmEntityContainer="MTDBEntities">
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="MTDBModel.addresses">
+        <MappingFragment StoreEntitySet="addresses">
+          <ScalarProperty Name="adr_id" ColumnName="adr_id" />
+          <ScalarProperty Name="adr_type" ColumnName="adr_type" />
+          <ScalarProperty Name="adr_name" ColumnName="adr_name" />
+          <ScalarProperty Name="adr_firstname" ColumnName="adr_firstname" />
+          <ScalarProperty Name="adr_street" ColumnName="adr_street" />
+          <ScalarProperty Name="adr_hno" ColumnName="adr_hno" />
+          <ScalarProperty Name="adr_zip" ColumnName="adr_zip" />
+          <ScalarProperty Name="adr_city" ColumnName="adr_city" />
+          <ScalarProperty Name="adr_countryCode" ColumnName="adr_countryCode" />
+          <ScalarProperty Name="adr_comment" ColumnName="adr_comment" />
+          <ScalarProperty Name="adr_deleted" ColumnName="adr_deleted" />
+          <ScalarProperty Name="adr_date_inserted" ColumnName="adr_date_inserted" />
+          <ScalarProperty Name="adr_us_id_inserted" ColumnName="adr_us_id_inserted" />
+          <ScalarProperty Name="adr_date_modified" ColumnName="adr_date_modified" />
+          <ScalarProperty Name="adr_us_id_modified" ColumnName="adr_us_id_modified" />
+          <ScalarProperty Name="adr_date_deleted" ColumnName="adr_date_deleted" />
+          <ScalarProperty Name="adr_us_id_deleted" ColumnName="adr_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary">
+      <EntityTypeMapping TypeName="MTDBModel.dictionary">
+        <MappingFragment StoreEntitySet="dictionary">
+          <ScalarProperty Name="dict_id" ColumnName="dict_id" />
+          <ScalarProperty Name="dict_name" ColumnName="dict_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtdb_reference">
+      <EntityTypeMapping TypeName="MTDBModel.mtdb_reference">
+        <MappingFragment StoreEntitySet="mtdb_reference">
+          <ScalarProperty Name="re_id" ColumnName="re_id" />
+          <ScalarProperty Name="re_dict_id" ColumnName="re_dict_id" />
+          <ScalarProperty Name="re_name" ColumnName="re_name" />
+          <ScalarProperty Name="re_deleted" ColumnName="re_deleted" />
+          <ScalarProperty Name="re_date_inserted" ColumnName="re_date_inserted" />
+          <ScalarProperty Name="re_us_id_inserted" ColumnName="re_us_id_inserted" />
+          <ScalarProperty Name="re_date_modified" ColumnName="re_date_modified" />
+          <ScalarProperty Name="re_us_id_modified" ColumnName="re_us_id_modified" />
+          <ScalarProperty Name="re_date_deleted" ColumnName="re_date_deleted" />
+          <ScalarProperty Name="re_us_id_deleted" ColumnName="re_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="persons">
+      <EntityTypeMapping TypeName="MTDBModel.persons">
+        <MappingFragment StoreEntitySet="persons">
+          <ScalarProperty Name="pe_id" ColumnName="pe_id" />
+          <ScalarProperty Name="pe_type" ColumnName="pe_type" />
+          <ScalarProperty Name="pe_adr_id" ColumnName="pe_adr_id" />
+          <ScalarProperty Name="pe_name" ColumnName="pe_name" />
+          <ScalarProperty Name="pe_firstname" ColumnName="pe_firstname" />
+          <ScalarProperty Name="pe_street" ColumnName="pe_street" />
+          <ScalarProperty Name="pe_hno" ColumnName="pe_hno" />
+          <ScalarProperty Name="pe_zip" ColumnName="pe_zip" />
+          <ScalarProperty Name="pe_city" ColumnName="pe_city" />
+          <ScalarProperty Name="pe_countryCode" ColumnName="pe_countryCode" />
+          <ScalarProperty Name="pe_deleted" ColumnName="pe_deleted" />
+          <ScalarProperty Name="pe_date_inserted" ColumnName="pe_date_inserted" />
+          <ScalarProperty Name="pe_us_id_inserted" ColumnName="pe_us_id_inserted" />
+          <ScalarProperty Name="pe_date_modified" ColumnName="pe_date_modified" />
+          <ScalarProperty Name="pe_us_id_modified" ColumnName="pe_us_id_modified" />
+          <ScalarProperty Name="pe_date_deleted" ColumnName="pe_date_deleted" />
+          <ScalarProperty Name="pe_us_id_deleted" ColumnName="pe_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phones">
+      <EntityTypeMapping TypeName="MTDBModel.phones">
+        <MappingFragment StoreEntitySet="phones">
+          <ScalarProperty Name="ph_id" ColumnName="ph_id" />
+          <ScalarProperty Name="ph_adr_id" ColumnName="ph_adr_id" />
+          <ScalarProperty Name="ph_pe_id" ColumnName="ph_pe_id" />
+          <ScalarProperty Name="ph_us_id" ColumnName="ph_us_id" />
+          <ScalarProperty Name="ph_phoneType" ColumnName="ph_phoneType" />
+          <ScalarProperty Name="ph_areaCode" ColumnName="ph_areaCode" />
+          <ScalarProperty Name="ph_phone" ColumnName="ph_phone" />
+          <ScalarProperty Name="ph_deleted" ColumnName="ph_deleted" />
+          <ScalarProperty Name="ph_date_inserted" ColumnName="ph_date_inserted" />
+          <ScalarProperty Name="ph_us_id_inserted" ColumnName="ph_us_id_inserted" />
+          <ScalarProperty Name="ph_date_modified" ColumnName="ph_date_modified" />
+          <ScalarProperty Name="ph_us_id_modified" ColumnName="ph_us_id_modified" />
+          <ScalarProperty Name="ph_date_deleted" ColumnName="ph_date_deleted" />
+          <ScalarProperty Name="ph_us_id_deleted" ColumnName="ph_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rights">
+      <EntityTypeMapping TypeName="MTDBModel.rights">
+        <MappingFragment StoreEntitySet="rights">
+          <ScalarProperty Name="ri_id" ColumnName="ri_id" />
+          <ScalarProperty Name="ri_name" ColumnName="ri_name" />
+          <ScalarProperty Name="ri_ro_id" ColumnName="ri_ro_id" />
+          <ScalarProperty Name="ri_deleted" ColumnName="ri_deleted" />
+          <ScalarProperty Name="ri_date_inserted" ColumnName="ri_date_inserted" />
+          <ScalarProperty Name="ri_us_id_inserted" ColumnName="ri_us_id_inserted" />
+          <ScalarProperty Name="ri_date_modified" ColumnName="ri_date_modified" />
+          <ScalarProperty Name="ri_us_id_modified" ColumnName="ri_us_id_modified" />
+          <ScalarProperty Name="ri_date_deleted" ColumnName="ri_date_deleted" />
+          <ScalarProperty Name="ri_us_id_deleted" ColumnName="ri_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="MTDBModel.roles">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="ro_id" ColumnName="ro_id" />
+          <ScalarProperty Name="ro_name" ColumnName="ro_name" />
+          <ScalarProperty Name="ro_us_id" ColumnName="ro_us_id" />
+          <ScalarProperty Name="ro_deleted" ColumnName="ro_deleted" />
+          <ScalarProperty Name="ro_date_inserted" ColumnName="ro_date_inserted" />
+          <ScalarProperty Name="ro_us_id_inserted" ColumnName="ro_us_id_inserted" />
+          <ScalarProperty Name="ro_date_modified" ColumnName="ro_date_modified" />
+          <ScalarProperty Name="ro_us_id_modified" ColumnName="ro_us_id_modified" />
+          <ScalarProperty Name="ro_date_deleted" ColumnName="ro_date_deleted" />
+          <ScalarProperty Name="ro_us_id_deleted" ColumnName="ro_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="MTDBModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="us_id" ColumnName="us_id" />
+          <ScalarProperty Name="us_sex" ColumnName="us_sex" />
+          <ScalarProperty Name="us_name" ColumnName="us_name" />
+          <ScalarProperty Name="us_firstname" ColumnName="us_firstname" />
+          <ScalarProperty Name="us_username" ColumnName="us_username" />
+          <ScalarProperty Name="us_password" ColumnName="us_password" />
+          <ScalarProperty Name="us_deleted" ColumnName="us_deleted" />
+          <ScalarProperty Name="us_date_inserted" ColumnName="us_date_inserted" />
+          <ScalarProperty Name="us_us_id_inserted" ColumnName="us_us_id_inserted" />
+          <ScalarProperty Name="us_date_modified" ColumnName="us_date_modified" />
+          <ScalarProperty Name="us_us_id_modified" ColumnName="us_us_id_modified" />
+          <ScalarProperty Name="us_date_deleted" ColumnName="us_date_deleted" />
+          <ScalarProperty Name="us_us_id_deleted" ColumnName="us_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="www">
+      <EntityTypeMapping TypeName="MTDBModel.www">
+        <MappingFragment StoreEntitySet="www">
+          <ScalarProperty Name="www_id" ColumnName="www_id" />
+          <ScalarProperty Name="www_adr_id" ColumnName="www_adr_id" />
+          <ScalarProperty Name="www_pe_id" ColumnName="www_pe_id" />
+          <ScalarProperty Name="www_us_id" ColumnName="www_us_id" />
+          <ScalarProperty Name="www_Type" ColumnName="www_Type" />
+          <ScalarProperty Name="www_value" ColumnName="www_value" />
+          <ScalarProperty Name="www_deleted" ColumnName="www_deleted" />
+          <ScalarProperty Name="www_date_inserted" ColumnName="www_date_inserted" />
+          <ScalarProperty Name="www_us_id_inserted" ColumnName="www_us_id_inserted" />
+          <ScalarProperty Name="www_date_modified" ColumnName="www_date_modified" />
+          <ScalarProperty Name="www_us_id_modified" ColumnName="www_us_id_modified" />
+          <ScalarProperty Name="www_date_deleted" ColumnName="www_date_deleted" />
+          <ScalarProperty Name="www_us_id_deleted" ColumnName="www_us_id_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_groups">
+      <EntityTypeMapping TypeName="MTDBModel.article_groups">
+        <MappingFragment StoreEntitySet="article_groups">
+          <ScalarProperty Name="ag_us_id_deleted" ColumnName="ag_us_id_deleted" />
+          <ScalarProperty Name="ag_date_deleted" ColumnName="ag_date_deleted" />
+          <ScalarProperty Name="ag_us_id_modified" ColumnName="ag_us_id_modified" />
+          <ScalarProperty Name="ag_date_modified" ColumnName="ag_date_modified" />
+          <ScalarProperty Name="ag_us_id_inserted" ColumnName="ag_us_id_inserted" />
+          <ScalarProperty Name="ag_date_inserted" ColumnName="ag_date_inserted" />
+          <ScalarProperty Name="ag_deleted" ColumnName="ag_deleted" />
+          <ScalarProperty Name="ag_description" ColumnName="ag_description" />
+          <ScalarProperty Name="ag_name" ColumnName="ag_name" />
+          <ScalarProperty Name="ag_id" ColumnName="ag_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articles">
+      <EntityTypeMapping TypeName="MTDBModel.articles">
+        <MappingFragment StoreEntitySet="articles">
+          <ScalarProperty Name="ar_nr" ColumnName="ar_nr" />
+          <ScalarProperty Name="ar_iv_id" ColumnName="ar_iv_id" />
+          <ScalarProperty Name="ar_us_id_deleted" ColumnName="ar_us_id_deleted" />
+          <ScalarProperty Name="ar_date_deleted" ColumnName="ar_date_deleted" />
+          <ScalarProperty Name="ar_us_id_modified" ColumnName="ar_us_id_modified" />
+          <ScalarProperty Name="ar_date_modified" ColumnName="ar_date_modified" />
+          <ScalarProperty Name="ar_us_id_inserted" ColumnName="ar_us_id_inserted" />
+          <ScalarProperty Name="ar_date_inserted" ColumnName="ar_date_inserted" />
+          <ScalarProperty Name="ar_deleted" ColumnName="ar_deleted" />
+          <ScalarProperty Name="ar_description" ColumnName="ar_description" />
+          <ScalarProperty Name="ar_barcode" ColumnName="ar_barcode" />
+          <ScalarProperty Name="ar_picturePath" ColumnName="ar_picturePath" />
+          <ScalarProperty Name="ar_price" ColumnName="ar_price" />
+          <ScalarProperty Name="ar_name" ColumnName="ar_name" />
+          <ScalarProperty Name="ar_cnt" ColumnName="ar_cnt" />
+          <ScalarProperty Name="ar_adr_id" ColumnName="ar_adr_id" />
+          <ScalarProperty Name="ar_ag_id" ColumnName="ar_ag_id" />
+          <ScalarProperty Name="ar_id" ColumnName="ar_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventory_positions">
+      <EntityTypeMapping TypeName="MTDBModel.inventory_positions">
+        <MappingFragment StoreEntitySet="inventory_positions">
+          <ScalarProperty Name="iv_us_id_deleted" ColumnName="iv_us_id_deleted" />
+          <ScalarProperty Name="iv_date_deleted" ColumnName="iv_date_deleted" />
+          <ScalarProperty Name="iv_us_id_modified" ColumnName="iv_us_id_modified" />
+          <ScalarProperty Name="iv_date_modified" ColumnName="iv_date_modified" />
+          <ScalarProperty Name="iv_us_id_inserted" ColumnName="iv_us_id_inserted" />
+          <ScalarProperty Name="iv_date_inserted" ColumnName="iv_date_inserted" />
+          <ScalarProperty Name="iv_deleted" ColumnName="iv_deleted" />
+          <ScalarProperty Name="iv_description" ColumnName="iv_description" />
+          <ScalarProperty Name="iv_position" ColumnName="iv_position" />
+          <ScalarProperty Name="iv_shelf" ColumnName="iv_shelf" />
+          <ScalarProperty Name="iv_row" ColumnName="iv_row" />
+          <ScalarProperty Name="iv_room" ColumnName="iv_room" />
+          <ScalarProperty Name="iv_building" ColumnName="iv_building" />
+          <ScalarProperty Name="iv_id" ColumnName="iv_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

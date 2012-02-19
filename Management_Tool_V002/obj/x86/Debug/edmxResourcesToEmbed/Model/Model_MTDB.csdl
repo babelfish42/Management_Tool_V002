@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MTDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MTDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="addresses" EntityType="MTDBModel.addresses" />
+    <EntitySet Name="dictionary" EntityType="MTDBModel.dictionary" />
+    <EntitySet Name="mtdb_reference" EntityType="MTDBModel.mtdb_reference" />
+    <EntitySet Name="persons" EntityType="MTDBModel.persons" />
+    <EntitySet Name="phones" EntityType="MTDBModel.phones" />
+    <EntitySet Name="rights" EntityType="MTDBModel.rights" />
+    <EntitySet Name="roles" EntityType="MTDBModel.roles" />
+    <EntitySet Name="users" EntityType="MTDBModel.users" />
+    <EntitySet Name="www" EntityType="MTDBModel.www" />
+    <EntitySet Name="article_groups" EntityType="MTDBModel.article_groups" />
+    <EntitySet Name="articles" EntityType="MTDBModel.articles" />
+    <EntitySet Name="inventory_positions" EntityType="MTDBModel.inventory_positions" />
+  </EntityContainer>
+  <EntityType Name="addresses">
+    <Key>
+      <PropertyRef Name="adr_id" />
+    </Key>
+    <Property Name="adr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adr_type" Type="Int32" Nullable="false" />
+    <Property Name="adr_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="adr_firstname" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="adr_street" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="adr_hno" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="adr_zip" Type="Int32" />
+    <Property Name="adr_city" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="adr_countryCode" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="adr_comment" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="adr_deleted" Type="Int32" />
+    <Property Name="adr_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="adr_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="adr_date_modified" Type="DateTime" />
+    <Property Name="adr_us_id_modified" Type="Int32" />
+    <Property Name="adr_date_deleted" Type="DateTime" />
+    <Property Name="adr_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="dictionary">
+    <Key>
+      <PropertyRef Name="dict_id" />
+    </Key>
+    <Property Name="dict_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dict_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="mtdb_reference">
+    <Key>
+      <PropertyRef Name="re_id" />
+    </Key>
+    <Property Name="re_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="re_dict_id" Type="Int32" Nullable="false" />
+    <Property Name="re_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="re_deleted" Type="Int32" />
+    <Property Name="re_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="re_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="re_date_modified" Type="DateTime" />
+    <Property Name="re_us_id_modified" Type="Int32" />
+    <Property Name="re_date_deleted" Type="DateTime" />
+    <Property Name="re_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="persons">
+    <Key>
+      <PropertyRef Name="pe_id" />
+    </Key>
+    <Property Name="pe_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pe_type" Type="Int32" Nullable="false" />
+    <Property Name="pe_adr_id" Type="Int32" />
+    <Property Name="pe_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="pe_firstname" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="pe_street" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="pe_hno" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="pe_zip" Type="Int32" />
+    <Property Name="pe_city" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="pe_countryCode" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="pe_deleted" Type="Int32" />
+    <Property Name="pe_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="pe_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="pe_date_modified" Type="DateTime" />
+    <Property Name="pe_us_id_modified" Type="Int32" />
+    <Property Name="pe_date_deleted" Type="DateTime" />
+    <Property Name="pe_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="phones">
+    <Key>
+      <PropertyRef Name="ph_id" />
+    </Key>
+    <Property Name="ph_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ph_adr_id" Type="Int32" />
+    <Property Name="ph_pe_id" Type="Int32" />
+    <Property Name="ph_us_id" Type="Int32" />
+    <Property Name="ph_phoneType" Type="Int32" Nullable="false" />
+    <Property Name="ph_areaCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ph_phone" Type="Int32" Nullable="false" />
+    <Property Name="ph_deleted" Type="Int32" />
+    <Property Name="ph_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="ph_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="ph_date_modified" Type="DateTime" />
+    <Property Name="ph_us_id_modified" Type="Int32" />
+    <Property Name="ph_date_deleted" Type="DateTime" />
+    <Property Name="ph_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="rights">
+    <Key>
+      <PropertyRef Name="ri_id" />
+    </Key>
+    <Property Name="ri_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ri_name" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="ri_ro_id" Type="Int32" />
+    <Property Name="ri_deleted" Type="Int32" />
+    <Property Name="ri_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="ri_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="ri_date_modified" Type="DateTime" />
+    <Property Name="ri_us_id_modified" Type="Int32" />
+    <Property Name="ri_date_deleted" Type="DateTime" />
+    <Property Name="ri_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="ro_id" />
+    </Key>
+    <Property Name="ro_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ro_name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="ro_us_id" Type="Int32" />
+    <Property Name="ro_deleted" Type="Int32" />
+    <Property Name="ro_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="ro_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="ro_date_modified" Type="DateTime" />
+    <Property Name="ro_us_id_modified" Type="Int32" />
+    <Property Name="ro_date_deleted" Type="DateTime" />
+    <Property Name="ro_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="us_id" />
+    </Key>
+    <Property Name="us_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="us_sex" Type="Int32" Nullable="false" />
+    <Property Name="us_name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="us_firstname" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="us_username" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="us_password" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="us_deleted" Type="Int32" Nullable="false" />
+    <Property Name="us_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="us_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="us_date_modified" Type="DateTime" />
+    <Property Name="us_us_id_modified" Type="Int32" />
+    <Property Name="us_date_deleted" Type="DateTime" />
+    <Property Name="us_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="www">
+    <Key>
+      <PropertyRef Name="www_id" />
+    </Key>
+    <Property Name="www_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="www_adr_id" Type="Int32" />
+    <Property Name="www_pe_id" Type="Int32" />
+    <Property Name="www_us_id" Type="Int32" />
+    <Property Name="www_Type" Type="Int32" Nullable="false" />
+    <Property Name="www_value" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="www_deleted" Type="Int32" />
+    <Property Name="www_date_inserted" Type="DateTime" Nullable="false" />
+    <Property Name="www_us_id_inserted" Type="Int32" Nullable="false" />
+    <Property Name="www_date_modified" Type="DateTime" />
+    <Property Name="www_us_id_modified" Type="Int32" />
+    <Property Name="www_date_deleted" Type="DateTime" />
+    <Property Name="www_us_id_deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="article_groups">
+    <Key>
+      <PropertyRef Name="ag_id" />
+    </Key>
+    <Property Type="Int32" Name="ag_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ag_name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ag_description" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ag_deleted" />
+    <Property Type="DateTime" Name="ag_date_inserted" Nullable="false" />
+    <Property Type="Int32" Name="ag_us_id_inserted" Nullable="false" />
+    <Property Type="DateTime" Name="ag_date_modified" />
+    <Property Type="Int32" Name="ag_us_id_modified" />
+    <Property Type="DateTime" Name="ag_date_deleted" />
+    <Property Type="Int32" Name="ag_us_id_deleted" />
+  </EntityType>
+  <EntityType Name="articles">
+    <Key>
+      <PropertyRef Name="ar_id" />
+    </Key>
+    <Property Type="Int32" Name="ar_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ar_ag_id" Nullable="false" />
+    <Property Type="Int32" Name="ar_adr_id" />
+    <Property Type="Int32" Name="ar_cnt" Nullable="false" />
+    <Property Type="String" Name="ar_name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ar_price" Nullable="false" />
+    <Property Type="String" Name="ar_picturePath" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ar_barcode" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ar_description" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ar_deleted" />
+    <Property Type="DateTime" Name="ar_date_inserted" Nullable="false" />
+    <Property Type="Int32" Name="ar_us_id_inserted" Nullable="false" />
+    <Property Type="DateTime" Name="ar_date_modified" />
+    <Property Type="Int32" Name="ar_us_id_modified" />
+    <Property Type="DateTime" Name="ar_date_deleted" />
+    <Property Type="Int32" Name="ar_us_id_deleted" />
+    <Property Type="Int32" Name="ar_iv_id" Nullable="false" />
+    <Property Type="Int32" Name="ar_nr" Nullable="false" />
+  </EntityType>
+  <EntityType Name="inventory_positions">
+    <Key>
+      <PropertyRef Name="iv_id" />
+    </Key>
+    <Property Type="Int32" Name="iv_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="iv_building" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="iv_room" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="iv_row" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="iv_shelf" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="iv_position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="iv_description" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="iv_deleted" />
+    <Property Type="DateTime" Name="iv_date_inserted" Nullable="false" />
+    <Property Type="Int32" Name="iv_us_id_inserted" Nullable="false" />
+    <Property Type="DateTime" Name="iv_date_modified" />
+    <Property Type="Int32" Name="iv_us_id_modified" />
+    <Property Type="DateTime" Name="iv_date_deleted" />
+    <Property Type="Int32" Name="iv_us_id_deleted" />
+  </EntityType>
+</Schema>

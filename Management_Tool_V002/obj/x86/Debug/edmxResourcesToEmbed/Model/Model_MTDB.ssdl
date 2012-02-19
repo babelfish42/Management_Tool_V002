@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MTDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MTDBModelStoreContainer">
+    <EntitySet Name="addresses" EntityType="MTDBModel.Store.addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="article_groups" EntityType="MTDBModel.Store.article_groups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="articles" EntityType="MTDBModel.Store.articles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="dictionary" EntityType="MTDBModel.Store.dictionary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inventory_positions" EntityType="MTDBModel.Store.inventory_positions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="mtdb_reference" EntityType="MTDBModel.Store.mtdb_reference" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="persons" EntityType="MTDBModel.Store.persons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="phones" EntityType="MTDBModel.Store.phones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rights" EntityType="MTDBModel.Store.rights" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="roles" EntityType="MTDBModel.Store.roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="users" EntityType="MTDBModel.Store.users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="www" EntityType="MTDBModel.Store.www" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="addresses">
+    <Key>
+      <PropertyRef Name="adr_id" />
+    </Key>
+    <Property Name="adr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="adr_type" Type="int" Nullable="false" />
+    <Property Name="adr_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="adr_firstname" Type="varchar" MaxLength="255" />
+    <Property Name="adr_street" Type="varchar" MaxLength="255" />
+    <Property Name="adr_hno" Type="varchar" MaxLength="10" />
+    <Property Name="adr_zip" Type="int" />
+    <Property Name="adr_city" Type="varchar" MaxLength="255" />
+    <Property Name="adr_countryCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="adr_comment" Type="varchar" MaxLength="500" />
+    <Property Name="adr_deleted" Type="int" />
+    <Property Name="adr_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="adr_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="adr_date_modified" Type="datetime" />
+    <Property Name="adr_us_id_modified" Type="int" />
+    <Property Name="adr_date_deleted" Type="datetime" />
+    <Property Name="adr_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="article_groups">
+    <Key>
+      <PropertyRef Name="ag_id" />
+    </Key>
+    <Property Name="ag_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ag_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ag_description" Type="varchar" MaxLength="255" />
+    <Property Name="ag_deleted" Type="int" />
+    <Property Name="ag_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="ag_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="ag_date_modified" Type="datetime" />
+    <Property Name="ag_us_id_modified" Type="int" />
+    <Property Name="ag_date_deleted" Type="datetime" />
+    <Property Name="ag_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="articles">
+    <Key>
+      <PropertyRef Name="ar_id" />
+    </Key>
+    <Property Name="ar_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ar_nr" Type="int" Nullable="false" />
+    <Property Name="ar_ag_id" Type="int" Nullable="false" />
+    <Property Name="ar_iv_id" Type="int" />
+    <Property Name="ar_adr_id" Type="int" />
+    <Property Name="ar_cnt" Type="int" Nullable="false" />
+    <Property Name="ar_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ar_price" Type="int" Nullable="false" />
+    <Property Name="ar_picturePath" Type="varchar" MaxLength="255" />
+    <Property Name="ar_barcode" Type="varchar" MaxLength="255" />
+    <Property Name="ar_description" Type="varchar" MaxLength="255" />
+    <Property Name="ar_deleted" Type="int" />
+    <Property Name="ar_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="ar_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="ar_date_modified" Type="datetime" />
+    <Property Name="ar_us_id_modified" Type="int" />
+    <Property Name="ar_date_deleted" Type="datetime" />
+    <Property Name="ar_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="dictionary">
+    <Key>
+      <PropertyRef Name="dict_id" />
+    </Key>
+    <Property Name="dict_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="dict_name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="inventory_positions">
+    <Key>
+      <PropertyRef Name="iv_id" />
+    </Key>
+    <Property Name="iv_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="iv_building" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="iv_room" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="iv_row" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="iv_shelf" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="iv_position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="iv_description" Type="varchar" MaxLength="255" />
+    <Property Name="iv_deleted" Type="int" />
+    <Property Name="iv_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="iv_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="iv_date_modified" Type="datetime" />
+    <Property Name="iv_us_id_modified" Type="int" />
+    <Property Name="iv_date_deleted" Type="datetime" />
+    <Property Name="iv_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="mtdb_reference">
+    <Key>
+      <PropertyRef Name="re_id" />
+    </Key>
+    <Property Name="re_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="re_dict_id" Type="int" Nullable="false" />
+    <Property Name="re_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="re_deleted" Type="int" />
+    <Property Name="re_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="re_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="re_date_modified" Type="datetime" />
+    <Property Name="re_us_id_modified" Type="int" />
+    <Property Name="re_date_deleted" Type="datetime" />
+    <Property Name="re_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="persons">
+    <Key>
+      <PropertyRef Name="pe_id" />
+    </Key>
+    <Property Name="pe_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pe_type" Type="int" Nullable="false" />
+    <Property Name="pe_adr_id" Type="int" />
+    <Property Name="pe_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="pe_firstname" Type="varchar" MaxLength="255" />
+    <Property Name="pe_street" Type="varchar" MaxLength="255" />
+    <Property Name="pe_hno" Type="varchar" MaxLength="10" />
+    <Property Name="pe_zip" Type="int" />
+    <Property Name="pe_city" Type="varchar" MaxLength="255" />
+    <Property Name="pe_countryCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="pe_deleted" Type="int" />
+    <Property Name="pe_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="pe_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="pe_date_modified" Type="datetime" />
+    <Property Name="pe_us_id_modified" Type="int" />
+    <Property Name="pe_date_deleted" Type="datetime" />
+    <Property Name="pe_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="phones">
+    <Key>
+      <PropertyRef Name="ph_id" />
+    </Key>
+    <Property Name="ph_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ph_adr_id" Type="int" />
+    <Property Name="ph_pe_id" Type="int" />
+    <Property Name="ph_us_id" Type="int" />
+    <Property Name="ph_phoneType" Type="int" Nullable="false" />
+    <Property Name="ph_areaCode" Type="varchar" MaxLength="10" />
+    <Property Name="ph_phone" Type="int" Nullable="false" />
+    <Property Name="ph_deleted" Type="int" />
+    <Property Name="ph_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="ph_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="ph_date_modified" Type="datetime" />
+    <Property Name="ph_us_id_modified" Type="int" />
+    <Property Name="ph_date_deleted" Type="datetime" />
+    <Property Name="ph_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="rights">
+    <Key>
+      <PropertyRef Name="ri_id" />
+    </Key>
+    <Property Name="ri_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ri_name" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="ri_ro_id" Type="int" />
+    <Property Name="ri_deleted" Type="int" />
+    <Property Name="ri_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="ri_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="ri_date_modified" Type="datetime" />
+    <Property Name="ri_us_id_modified" Type="int" />
+    <Property Name="ri_date_deleted" Type="datetime" />
+    <Property Name="ri_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="ro_id" />
+    </Key>
+    <Property Name="ro_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ro_name" Type="varchar" MaxLength="45" />
+    <Property Name="ro_us_id" Type="int" />
+    <Property Name="ro_deleted" Type="int" />
+    <Property Name="ro_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="ro_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="ro_date_modified" Type="datetime" />
+    <Property Name="ro_us_id_modified" Type="int" />
+    <Property Name="ro_date_deleted" Type="datetime" />
+    <Property Name="ro_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="us_id" />
+    </Key>
+    <Property Name="us_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="us_sex" Type="int" Nullable="false" />
+    <Property Name="us_name" Type="varchar" MaxLength="255" />
+    <Property Name="us_firstname" Type="varchar" MaxLength="255" />
+    <Property Name="us_username" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="us_password" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="us_deleted" Type="int" Nullable="false" />
+    <Property Name="us_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="us_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="us_date_modified" Type="datetime" />
+    <Property Name="us_us_id_modified" Type="int" />
+    <Property Name="us_date_deleted" Type="datetime" />
+    <Property Name="us_us_id_deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="www">
+    <Key>
+      <PropertyRef Name="www_id" />
+    </Key>
+    <Property Name="www_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="www_adr_id" Type="int" />
+    <Property Name="www_pe_id" Type="int" />
+    <Property Name="www_us_id" Type="int" />
+    <Property Name="www_Type" Type="int" Nullable="false" />
+    <Property Name="www_value" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="www_deleted" Type="int" />
+    <Property Name="www_date_inserted" Type="datetime" Nullable="false" />
+    <Property Name="www_us_id_inserted" Type="int" Nullable="false" />
+    <Property Name="www_date_modified" Type="datetime" />
+    <Property Name="www_us_id_modified" Type="int" />
+    <Property Name="www_date_deleted" Type="datetime" />
+    <Property Name="www_us_id_deleted" Type="int" />
+  </EntityType>
+</Schema>

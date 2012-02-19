@@ -1,0 +1,51 @@
+﻿<Window x:Class="Management_Tool_V002.UI.ArticleDataUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Artikel" Height="284" Width="783" Topmost="False">
+    <Window.Background>
+        <ImageBrush ImageSource="/Management_Tool_V002;component/UI/Pictures/Fotolia_23844439_XS.jpg" Stretch="None" TileMode="FlipX" Viewport="0,0,552,386.666666666667" ViewportUnits="Absolute" />
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Artikel Nummer</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="textBoxArticleNr" TextWrapping="NoWrap" LostFocus="textBoxArticleNr_LostFocus" />
+        <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Name</Label>
+        <TextBox Grid.Row="0" Grid.Column="3" Name="textBoxArticleName"/>
+        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Artikelgruppe</Label>
+        <ComboBox Grid.Row="1" Grid.Column="1" Name="comoboxArticleGroups" SelectedValue="{Binding Path=AR_AG_ID}"/>
+        <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Artikel Position</Label>
+        <ComboBox Grid.Row="1" Grid.Column="3" Name="comoboxArticlePositions" SelectedValue="{Binding Path=AR_IV_ID}"/>
+        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Lieferant</Label>
+        <ComboBox Grid.Row="2" Grid.Column="1" Name="comoboxArticleSuppliers" SelectedValue="{Binding Path=AR_AG_ID}"/>
+        <Label Grid.Row="2" Grid.Column="2" FontWeight="Bold">Bestand</Label>
+        <TextBox Grid.Row="2" Grid.Column="3" Name="textBoxArticleCnt"/>
+        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Preis</Label>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="textBoxArticlePrice"/>
+        <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">Barcode</Label>
+        <TextBox Grid.Row="3" Grid.Column="3" Name="textBoxArticleBarcode"/>
+        <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Beschreib</Label>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="textBoxArticleDescription"/>
+        <Label Grid.Row="4" Grid.Column="2" FontWeight="Bold">Bildpfad</Label>
+        <TextBox Grid.Row="4" Grid.Column="3" Name="textBoxArticlePicutrePath"/>
+        <Button Grid.Row="4" Grid.Column="5" Name="btnSearchPicture" Height="25" Width="80" Click="btnSearchPicture_Click">Bild suchen</Button>
+        <Image Grid.Column="4" Margin="0,0,-61,0" Grid.RowSpan="4" Name="imageArticle" Stretch="None"></Image>
+        <CheckBox Grid.Row="6" Grid.Column="1" FontWeight="Bold" Content="Löschen"  Height="21" HorizontalAlignment="Center" Margin="6,6,0,0" Name="checkBoxDeleteArticle" VerticalAlignment="Top" Width="90" Visibility="Visible" />
+        <Button Grid.Row="6" Grid.Column="2" Name="btnCancel" FontWeight="Bold" Height="25" Width="80" Click="btnCancel_Click">Abbrechen</Button>
+        <Button Grid.Row="6" Grid.Column="3" Name="btnSave" Click="btnSave_Click" FontWeight="Bold" Height="25" Width="100">Speichern</Button>
+    </Grid>
+</Window>
