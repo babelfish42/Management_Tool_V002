@@ -204,6 +204,7 @@
     <EntitySetMapping Name="inventory_positions">
       <EntityTypeMapping TypeName="MTDBModel.inventory_positions">
         <MappingFragment StoreEntitySet="inventory_positions">
+          <ScalarProperty Name="iv_building" ColumnName="iv_building" />
           <ScalarProperty Name="iv_us_id_deleted" ColumnName="iv_us_id_deleted" />
           <ScalarProperty Name="iv_date_deleted" ColumnName="iv_date_deleted" />
           <ScalarProperty Name="iv_us_id_modified" ColumnName="iv_us_id_modified" />
@@ -212,11 +213,6 @@
           <ScalarProperty Name="iv_date_inserted" ColumnName="iv_date_inserted" />
           <ScalarProperty Name="iv_deleted" ColumnName="iv_deleted" />
           <ScalarProperty Name="iv_description" ColumnName="iv_description" />
-          <ScalarProperty Name="iv_position" ColumnName="iv_position" />
-          <ScalarProperty Name="iv_shelf" ColumnName="iv_shelf" />
-          <ScalarProperty Name="iv_row" ColumnName="iv_row" />
-          <ScalarProperty Name="iv_room" ColumnName="iv_room" />
-          <ScalarProperty Name="iv_building" ColumnName="iv_building" />
           <ScalarProperty Name="iv_id" ColumnName="iv_id" />
         </MappingFragment>
       </EntityTypeMapping>

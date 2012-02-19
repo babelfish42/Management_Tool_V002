@@ -228,7 +228,6 @@ namespace Management_Tool_V002.Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        
         public ObjectSet<articles> articles
         {
             get
@@ -342,11 +341,11 @@ namespace Management_Tool_V002.Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the nameList EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the articles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToarticles(articles articles)
         {
-            base.AddObject("nameList", articles);
+            base.AddObject("articles", articles);
         }
     
         /// <summary>
@@ -1094,7 +1093,7 @@ namespace Management_Tool_V002.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="MTDBModel", Name="nameList")]
+    [EdmEntityTypeAttribute(NamespaceName="MTDBModel", Name="articles")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class articles : EntityObject
@@ -1102,7 +1101,7 @@ namespace Management_Tool_V002.Model
         #region Factory Method
     
         /// <summary>
-        /// Create a new nameList object.
+        /// Create a new articles object.
         /// </summary>
         /// <param name="ar_id">Initial value of the ar_id property.</param>
         /// <param name="ar_ag_id">Initial value of the ar_ag_id property.</param>
@@ -1665,24 +1664,16 @@ namespace Management_Tool_V002.Model
         /// Create a new inventory_positions object.
         /// </summary>
         /// <param name="iv_id">Initial value of the iv_id property.</param>
-        /// <param name="iv_building">Initial value of the iv_building property.</param>
-        /// <param name="iv_room">Initial value of the iv_room property.</param>
-        /// <param name="iv_row">Initial value of the iv_row property.</param>
-        /// <param name="iv_shelf">Initial value of the iv_shelf property.</param>
-        /// <param name="iv_position">Initial value of the iv_position property.</param>
         /// <param name="iv_date_inserted">Initial value of the iv_date_inserted property.</param>
         /// <param name="iv_us_id_inserted">Initial value of the iv_us_id_inserted property.</param>
-        public static inventory_positions Createinventory_positions(global::System.Int32 iv_id, global::System.String iv_building, global::System.String iv_room, global::System.String iv_row, global::System.String iv_shelf, global::System.String iv_position, global::System.DateTime iv_date_inserted, global::System.Int32 iv_us_id_inserted)
+        /// <param name="iv_building">Initial value of the iv_building property.</param>
+        public static inventory_positions Createinventory_positions(global::System.Int32 iv_id, global::System.DateTime iv_date_inserted, global::System.Int32 iv_us_id_inserted, global::System.String iv_building)
         {
             inventory_positions inventory_positions = new inventory_positions();
             inventory_positions.iv_id = iv_id;
-            inventory_positions.iv_building = iv_building;
-            inventory_positions.iv_room = iv_room;
-            inventory_positions.iv_row = iv_row;
-            inventory_positions.iv_shelf = iv_shelf;
-            inventory_positions.iv_position = iv_position;
             inventory_positions.iv_date_inserted = iv_date_inserted;
             inventory_positions.iv_us_id_inserted = iv_us_id_inserted;
+            inventory_positions.iv_building = iv_building;
             return inventory_positions;
         }
 
@@ -1715,126 +1706,6 @@ namespace Management_Tool_V002.Model
         private global::System.Int32 _iv_id;
         partial void Oniv_idChanging(global::System.Int32 value);
         partial void Oniv_idChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String iv_building
-        {
-            get
-            {
-                return _iv_building;
-            }
-            set
-            {
-                Oniv_buildingChanging(value);
-                ReportPropertyChanging("iv_building");
-                _iv_building = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("iv_building");
-                Oniv_buildingChanged();
-            }
-        }
-        private global::System.String _iv_building;
-        partial void Oniv_buildingChanging(global::System.String value);
-        partial void Oniv_buildingChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String iv_room
-        {
-            get
-            {
-                return _iv_room;
-            }
-            set
-            {
-                Oniv_roomChanging(value);
-                ReportPropertyChanging("iv_room");
-                _iv_room = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("iv_room");
-                Oniv_roomChanged();
-            }
-        }
-        private global::System.String _iv_room;
-        partial void Oniv_roomChanging(global::System.String value);
-        partial void Oniv_roomChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String iv_row
-        {
-            get
-            {
-                return _iv_row;
-            }
-            set
-            {
-                Oniv_rowChanging(value);
-                ReportPropertyChanging("iv_row");
-                _iv_row = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("iv_row");
-                Oniv_rowChanged();
-            }
-        }
-        private global::System.String _iv_row;
-        partial void Oniv_rowChanging(global::System.String value);
-        partial void Oniv_rowChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String iv_shelf
-        {
-            get
-            {
-                return _iv_shelf;
-            }
-            set
-            {
-                Oniv_shelfChanging(value);
-                ReportPropertyChanging("iv_shelf");
-                _iv_shelf = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("iv_shelf");
-                Oniv_shelfChanged();
-            }
-        }
-        private global::System.String _iv_shelf;
-        partial void Oniv_shelfChanging(global::System.String value);
-        partial void Oniv_shelfChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String iv_position
-        {
-            get
-            {
-                return _iv_position;
-            }
-            set
-            {
-                Oniv_positionChanging(value);
-                ReportPropertyChanging("iv_position");
-                _iv_position = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("iv_position");
-                Oniv_positionChanged();
-            }
-        }
-        private global::System.String _iv_position;
-        partial void Oniv_positionChanging(global::System.String value);
-        partial void Oniv_positionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2027,6 +1898,30 @@ namespace Management_Tool_V002.Model
         private Nullable<global::System.Int32> _iv_us_id_deleted;
         partial void Oniv_us_id_deletedChanging(Nullable<global::System.Int32> value);
         partial void Oniv_us_id_deletedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String iv_building
+        {
+            get
+            {
+                return _iv_building;
+            }
+            set
+            {
+                Oniv_buildingChanging(value);
+                ReportPropertyChanging("iv_building");
+                _iv_building = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("iv_building");
+                Oniv_buildingChanged();
+            }
+        }
+        private global::System.String _iv_building;
+        partial void Oniv_buildingChanging(global::System.String value);
+        partial void Oniv_buildingChanged();
 
         #endregion
     

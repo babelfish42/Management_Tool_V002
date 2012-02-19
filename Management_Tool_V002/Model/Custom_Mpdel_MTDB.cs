@@ -14,11 +14,35 @@ namespace Management_Tool_V002.Model
         }
     }
 
+    public partial class articles
+    {
+        public bool isNew
+        {
+            get { return !(this.ar_id > 0); }
+        }
+    }
+
+    public partial class article_groups
+    {
+        public bool isNew
+        {
+            get { return !(this.ag_id > 0); }
+        }
+    }
+
     public partial class dictionary
     {
         public bool isNew
         {
             get { return !(this.dict_id>0);}
+        }
+    }
+
+    public partial class inventory_positions
+    {
+        public bool isNew
+        {
+            get { return !(this.iv_id > 0); }
         }
     }
 
@@ -77,4 +101,6 @@ namespace Management_Tool_V002.Model
             get { return !(this.www_id > 0); }
         }
     }
+
+    
 }

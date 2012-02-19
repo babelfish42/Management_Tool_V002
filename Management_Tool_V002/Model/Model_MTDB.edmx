@@ -92,10 +92,6 @@
           </Key>
           <Property Name="iv_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="iv_building" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="iv_room" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="iv_row" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="iv_shelf" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="iv_position" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="iv_description" Type="varchar" MaxLength="255" />
           <Property Name="iv_deleted" Type="int" />
           <Property Name="iv_date_inserted" Type="datetime" Nullable="false" />
@@ -439,11 +435,6 @@
             <PropertyRef Name="iv_id" />
           </Key>
           <Property Type="Int32" Name="iv_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="iv_building" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="iv_room" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="iv_row" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="iv_shelf" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="iv_position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="iv_description" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="iv_deleted" />
           <Property Type="DateTime" Name="iv_date_inserted" Nullable="false" />
@@ -452,6 +443,7 @@
           <Property Type="Int32" Name="iv_us_id_modified" />
           <Property Type="DateTime" Name="iv_date_deleted" />
           <Property Type="Int32" Name="iv_us_id_deleted" />
+          <Property Type="String" Name="iv_building" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -626,6 +618,7 @@
           <EntitySetMapping Name="inventory_positions">
             <EntityTypeMapping TypeName="MTDBModel.inventory_positions">
               <MappingFragment StoreEntitySet="inventory_positions">
+                <ScalarProperty Name="iv_building" ColumnName="iv_building" />
                 <ScalarProperty Name="iv_us_id_deleted" ColumnName="iv_us_id_deleted" />
                 <ScalarProperty Name="iv_date_deleted" ColumnName="iv_date_deleted" />
                 <ScalarProperty Name="iv_us_id_modified" ColumnName="iv_us_id_modified" />
@@ -634,11 +627,6 @@
                 <ScalarProperty Name="iv_date_inserted" ColumnName="iv_date_inserted" />
                 <ScalarProperty Name="iv_deleted" ColumnName="iv_deleted" />
                 <ScalarProperty Name="iv_description" ColumnName="iv_description" />
-                <ScalarProperty Name="iv_position" ColumnName="iv_position" />
-                <ScalarProperty Name="iv_shelf" ColumnName="iv_shelf" />
-                <ScalarProperty Name="iv_row" ColumnName="iv_row" />
-                <ScalarProperty Name="iv_room" ColumnName="iv_room" />
-                <ScalarProperty Name="iv_building" ColumnName="iv_building" />
                 <ScalarProperty Name="iv_id" ColumnName="iv_id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -675,7 +663,7 @@
         <EntityTypeShape EntityType="MTDBModel.www" Width="1.5" PointX="8.75" PointY="0.75" Height="3.5186979166666674" IsExpanded="true" />
         <EntityTypeShape EntityType="MTDBModel.article_groups" Width="1.5" PointX="0.75" PointY="9.75" Height="2.9417936197916674" />
         <EntityTypeShape EntityType="MTDBModel.articles" Width="1.5" PointX="2.75" PointY="9.75" Height="4.0956022135416674" />
-        <EntityTypeShape EntityType="MTDBModel.inventory_positions" Width="1.5" PointX="9.375" PointY="5.75" Height="3.7109993489583317" />
+        <EntityTypeShape EntityType="MTDBModel.inventory_positions" Width="1.5" PointX="9.375" PointY="5.75" Height="2.9417936197916656" />
       </Diagram>
     </Diagrams>
   </Designer>

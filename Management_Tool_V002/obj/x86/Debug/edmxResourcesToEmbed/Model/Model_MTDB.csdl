@@ -208,11 +208,6 @@
       <PropertyRef Name="iv_id" />
     </Key>
     <Property Type="Int32" Name="iv_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="iv_building" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="iv_room" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="iv_row" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="iv_shelf" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="iv_position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="iv_description" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="iv_deleted" />
     <Property Type="DateTime" Name="iv_date_inserted" Nullable="false" />
@@ -221,5 +216,6 @@
     <Property Type="Int32" Name="iv_us_id_modified" />
     <Property Type="DateTime" Name="iv_date_deleted" />
     <Property Type="Int32" Name="iv_us_id_deleted" />
+    <Property Type="String" Name="iv_building" Nullable="false" />
   </EntityType>
 </Schema>

@@ -66,6 +66,6 @@ INSERT INTO article_groups(ag_name, ag_date_inserted, ag_us_id_inserted)
 VALUES	('Artikelgruppe A', GETDATE(),1)		,
 		('Artikelgruppe B', GETDATE(),1)
 
-INSERT INTO inventory_positions(iv_building, iv_room, iv_row, iv_shelf, iv_position, iv_date_inserted, iv_us_id_inserted)
-VALUES	('Gebäude A','Raum 1','Reihe D','Regal 22','Position 1', GETDATE(),1),
-		('Gebäude ZZ','Raum 2','Reihe V','Regal 1','Position 13', GETDATE(),1)
+INSERT INTO inventory_positions(iv_building, iv_date_inserted, iv_us_id_inserted)
+VALUES	('Gebäude A',GETDATE(),1),
+		('Gebäude ZZ', GETDATE(),1)

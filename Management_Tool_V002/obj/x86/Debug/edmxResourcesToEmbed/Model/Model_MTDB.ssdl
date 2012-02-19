@@ -87,10 +87,6 @@
     </Key>
     <Property Name="iv_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="iv_building" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="iv_room" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="iv_row" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="iv_shelf" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="iv_position" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="iv_description" Type="varchar" MaxLength="255" />
     <Property Name="iv_deleted" Type="int" />
     <Property Name="iv_date_inserted" Type="datetime" Nullable="false" />

@@ -196,16 +196,19 @@ namespace Management_Tool_V002.UI
 
             Int32 articleNR = Int32.Parse(textBoxArticleNr.Text.ToString());
 
+            
+
             try
             {
                 cmd = new SqlCommand();
                 Conn = new SqlConnection("Data Source=.;Initial Catalog=MTDB;Integrated Security=SSPI");
                 Conn.Open();
                 cmd.Connection = Conn;
-                cmd.CommandText = "SELECT ar_nr,ar_ag_id, ar_adr_id, ar_cnt, ar_name, ar_price, ar_barcode, ar_iv_id FROM MTDB..articles WHERE ar_nr=" + articleNR + "AND (AR_DELETED=0 OR AR_DELETED IS NULL)";
+                cmd.CommandText = "SELECT ar_nr,ar_ag_id, ar_adr_id, ar_cnt, ar_name, ar_price, ar_barcode, ar_iv_id, ar_picturePath FROM MTDB..articles WHERE ar_nr=" + articleNR + "AND (AR_DELETED=0 OR AR_DELETED IS NULL)";
                 cmd.ExecuteNonQuery();
                 SqlDataReader reader = null;
                 reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                     {
                         comoboxArticleGroups.SelectedValue = reader["ar_ag_id"].ToString();
@@ -215,6 +218,18 @@ namespace Management_Tool_V002.UI
                         textBoxArticlePrice.Text = reader["ar_price"].ToString();
                         textBoxArticleBarcode.Text = reader["ar_barcode"].ToString();
                         comoboxArticlePositions.SelectedValue = reader["ar_iv_id"].ToString();
+                        textBoxArticlePicutrePath.Text = reader["ar_PicturePath"].ToString();
+
+                        if (textBoxArticlePicutrePath.Text != "")
+                        {
+
+                            BitmapImage articleBitmapImage = new BitmapImage();
+                            articleBitmapImage.BeginInit();
+                            articleBitmapImage.UriSource = new Uri(reader["ar_picturePath"].ToString());
+                            articleBitmapImage.EndInit();
+                            imageOfArticle.Stretch = Stretch.Fill;
+                            imageOfArticle.Source = articleBitmapImage;
+                        }
                         sqlStatement = "Update";
                     }
                 Conn.Close();
