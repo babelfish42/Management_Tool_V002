@@ -17,3 +17,9 @@ C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Manag
 C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\Management_Tool_V002.pdb
 C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\bin\Debug\Microsoft.PointOfService.Admin.dll
 C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\bin\Debug\OnBarcode.Barcode.BarcodeScanner.dll
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\UI\ArticleGroupDataUI.baml
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\UI\ArticleGroupDataUI.g.cs
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\UI\InventoryPositionDataUI.baml
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\UI\SupplierDataUI.baml
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\UI\InventoryPositionDataUI.g.cs
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\obj\x86\Debug\UI\SupplierDataUI.g.cs

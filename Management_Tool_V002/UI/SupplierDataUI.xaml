@@ -1,0 +1,45 @@
+﻿<Window x:Class="Management_Tool_V002.UI.SupplierDataUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lieferant" Height="355" Width="779" Foreground="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold">Name</Label>
+        <TextBox Grid.Column="1" Grid.Row="1" Name="textBoxSupplierName" LostFocus="textBoxSupplierName_LostFocus" />
+        <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold">Strasse</Label>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="textBoxSupplierStreet" />
+        <Label Grid.Column="2" Grid.Row="2" FontWeight="Bold" Foreground="Black">Hausnummer</Label>
+        <TextBox Grid.Column="3" Grid.Row="2" Name="textBoxSupplierHno" />
+        <Label Grid.Column="0" Grid.Row="3" FontWeight="Bold">PLZ</Label>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="textBoxSupplierZIP" />
+        <Label Grid.Column="2" Grid.Row="3" FontWeight="Bold">Ort</Label>
+        <TextBox Grid.Column="3" Grid.Row="3" Name="textBoxSupplierCity" />
+        <Label Grid.Column="4" Grid.Row="3" FontWeight="Bold">Land</Label>
+        <TextBox Grid.Column="5" Grid.Row="3" Name="textBoxSupplierCountry" />
+        <Label Grid.Column="0" Grid.Row="5" FontWeight="Bold">Beschreibung</Label>
+        <TextBox Grid.Column="1" Grid.Row="5" Name="textBoxSupplierDescription" Grid.ColumnSpan="2" Grid.RowSpan="3" />
+        <CheckBox Grid.Row="7" Grid.Column="3" FontWeight="Bold" Content="Löschen"  Height="21" HorizontalAlignment="Center" Margin="6,6,0,0" Name="checkBoxDeleteSupplier" VerticalAlignment="Top" Width="90" Visibility="Visible" />
+        <Button Grid.Row="7" Grid.Column="4" Name="btnCancel" FontWeight="Bold" Height="25" Width="80" Click="btnCancel_Click">Abbrechen</Button>
+        <Button Grid.Row="7" Grid.Column="5" Name="btnSave" Click="btnSave_Click" FontWeight="Bold" Height="25" Width="100">Speichern</Button>
+    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="/Management_Tool_V002;component/UI/Pictures/Fotolia_23844439_XS.jpg" Stretch="None" TileMode="FlipY" Viewport="0,0,552,386.666666666667" ViewportUnits="Absolute" />
+    </Window.Background>
+</Window>

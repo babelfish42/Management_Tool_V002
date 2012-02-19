@@ -1,0 +1,30 @@
+﻿<Window x:Class="Management_Tool_V002.UI.InventoryPositionDataUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lager Position" Height="166" Width="528">
+    <Window.Background>
+        <ImageBrush ImageSource="/Management_Tool_V002;component/UI/Pictures/Fotolia_23844439_XS.jpg" Stretch="Uniform" TileMode="FlipX" Viewport="0,0,552,386.666666666667" ViewportUnits="Absolute" />
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="1">Position</Label>
+        <TextBox Grid.Column="1" Grid.Row="1" Name="textBoxInventoryPositionBuilding" LostFocus="textBoxInventoryName_LostFocus" />
+        <Label Grid.Column="0" Grid.Row="2">Beschreibung</Label>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="textBoxInventoryDescription" Grid.RowSpan="2" />
+        <CheckBox Grid.Row="2" Grid.Column="2" FontWeight="Bold" Content="Löschen"  Height="21" HorizontalAlignment="Center" Margin="6,6,0,0" Name="checkBoxInventoryDelete" VerticalAlignment="Top" Width="90" Visibility="Visible" />
+        <Button Grid.Row="3" Grid.Column="2" Name="btnCancel" FontWeight="Bold" Height="25" Width="80" Click="btnCancel_Click">Abbrechen</Button>
+        <Button Grid.Row="3" Grid.Column="3" Name="btnSave" Click="btnSave_Click" FontWeight="Bold" Height="25" Width="100">Speichern</Button>
+    </Grid>
+</Window>

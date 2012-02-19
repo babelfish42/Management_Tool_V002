@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\sandra\Documents\Visual Studio 2010\Projects\Management_Tool_V002\Management_Tool_V002\App.xaml
-2940510719
+5-835582669
 31742777259
-8-2044166342
+11-1129297846
 211020117370
-UI\ArticleDataUI.xaml;UI\MainFrameUI.xaml;
+UI\ArticleDataUI.xaml;UI\ArticleGroupDataUI.xaml;UI\InventoryPositionDataUI.xaml;UI\MainFrameUI.xaml;UI\SupplierDataUI.xaml;
 
 False
 

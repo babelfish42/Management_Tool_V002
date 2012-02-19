@@ -39,11 +39,11 @@
         <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">Barcode</Label>
         <TextBox Grid.Row="3" Grid.Column="3" Name="textBoxArticleBarcode"/>
         <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Beschreib</Label>
-        <TextBox Grid.Row="4" Grid.Column="1" Name="textBoxArticleDescription"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="textBoxArticleDescription" Grid.RowSpan="2" TextWrapping="Wrap" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  />
         <Label Grid.Row="4" Grid.Column="2" FontWeight="Bold">Bildpfad</Label>
         <TextBox Grid.Row="4" Grid.Column="3" Name="textBoxArticlePicutrePath"/>
         <Button Grid.Row="4" Grid.Column="5" Name="btnSearchPicture" Height="25" Width="80" Click="btnSearchPicture_Click">Bild suchen</Button>
-        <Image Grid.Column="4" Margin="0,0,-61,0" Grid.RowSpan="4" Name="imageArticle" Stretch="None"></Image>
+        <Image Grid.Column="4" Margin="0,0,-61,0" Grid.RowSpan="4" Name="imageOfArticle" Stretch="None"></Image>
         <CheckBox Grid.Row="6" Grid.Column="1" FontWeight="Bold" Content="Löschen"  Height="21" HorizontalAlignment="Center" Margin="6,6,0,0" Name="checkBoxDeleteArticle" VerticalAlignment="Top" Width="90" Visibility="Visible" />
         <Button Grid.Row="6" Grid.Column="2" Name="btnCancel" FontWeight="Bold" Height="25" Width="80" Click="btnCancel_Click">Abbrechen</Button>
         <Button Grid.Row="6" Grid.Column="3" Name="btnSave" Click="btnSave_Click" FontWeight="Bold" Height="25" Width="100">Speichern</Button>

@@ -44,6 +44,7 @@ namespace Management_Tool_V002.UI
             this.comoboxArticleSuppliers.ItemsSource = getSupplierInformation();
             this.comoboxArticleSuppliers.DisplayMemberPath = "adr_name";
             this.comoboxArticleSuppliers.SelectedValuePath = "adr_id";
+            sqlStatement = "";
 
         }
 
@@ -115,7 +116,7 @@ namespace Management_Tool_V002.UI
                 sqlStatement = "Delete";
             }
 
-            if (sqlStatement == null)
+            if (sqlStatement.Equals(""))
             {
                 try
                 {
@@ -226,20 +227,22 @@ namespace Management_Tool_V002.UI
 
         private void btnSearchPicture_Click(object sender, RoutedEventArgs e)
         {
+            
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.InitialDirectory = "C:\\Users\\sandra\\Pictures";
             openFileDialog1.RestoreDirectory = true;
             openFileDialog1.ShowDialog();
-
+            
+            
             String articlePicutrePath = openFileDialog1.FileName.ToString();
-            Image articleImage = new Image();
+            //Image articleImage = new Image();
             BitmapImage articleBitmapImage = new BitmapImage();
             articleBitmapImage.BeginInit();
-            articleBitmapImage.UriSource = new Uri(articlePicutrePath, UriKind.Relative);
+            articleBitmapImage.UriSource = new Uri(articlePicutrePath);
             articleBitmapImage.EndInit();
-            articleImage.Stretch = Stretch.Fill;
-            articleImage.Source = articleBitmapImage;
-            
+            imageOfArticle.Stretch = Stretch.Fill;
+            imageOfArticle.Source = articleBitmapImage;
+            textBoxArticlePicutrePath.Text = articlePicutrePath.ToString();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

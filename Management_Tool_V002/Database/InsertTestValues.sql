@@ -44,6 +44,7 @@ VALUES  (1, 1, '+4144',8191047,0,getDate(),1),
         
 INSERT INTO addresses (adr_type, adr_name, adr_street, adr_hno, adr_zip, adr_city,adr_countryCode, adr_deleted, adr_date_inserted, adr_us_id_inserted)
 VALUES  (6,'Roth IT Solutions','Ringwiesenstrasse','4',8600,'Dübendorf','CHE',0,getDate(),1),
+		(6,'Digitec AG','Hardstrasse','414',8000,'Zürich','CHE',0,getDate(),1),
         (7,'Stanik Informatik','Ringwiesenstrasse','4',8600,'Dübendorf','CHE',0,getDate(),1),
         (8,'Deltavista AG','Riesbachstrasse','61',8008,'Zürich','CHE',0,getDate(),1)
         
@@ -58,8 +59,8 @@ VALUES ('Administrator',GETDATE(),1),
 		
 INSERT INTO articles (ar_ag_id, ar_nr,ar_adr_id, ar_iv_id, ar_cnt, ar_name, ar_price, ar_date_inserted, ar_us_id_inserted) 
 VALUES	(1,123,1,1,0,'Produkt A',99.30,GETDATE(),0),
-		(2,456,2,2,0,'Produkt B',30,GETDATE(),0),
-		(1,789,3,2,0,'Produkt C',13,GETDATE(),0)
+		(2,456,1,2,0,'Produkt B',30,GETDATE(),0),
+		(1,789,2,2,0,'Produkt C',13,GETDATE(),0)
 	
 INSERT INTO article_groups(ag_name, ag_date_inserted, ag_us_id_inserted)
 VALUES	('Artikelgruppe A', GETDATE(),1)		,

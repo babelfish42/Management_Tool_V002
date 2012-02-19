@@ -29,5 +29,23 @@ namespace Management_Tool_V002.UI
             windowArticle.Show();
         }
 
+        private void ShowArticleGroupData_Selected(object sender, RoutedEventArgs e)
+        {
+            ArticleGroupDataUI windowArticleGroup = new ArticleGroupDataUI();
+            windowArticleGroup.Show();
+        }
+
+        private void showInventoryPosition_Selected(object sender, RoutedEventArgs e)
+        {
+            InventoryPositionDataUI windowInventory = new InventoryPositionDataUI();
+            windowInventory.Show();
+        }
+
+        private void showSupplierData_Selected(object sender, RoutedEventArgs e)
+        {
+            SupplierDataUI windowSupplier = new SupplierDataUI();
+            windowSupplier.Show();
+        }
+
     }
 }

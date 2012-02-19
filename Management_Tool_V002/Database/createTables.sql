@@ -90,7 +90,7 @@ CREATE TABLE [dbo].[addresses](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY],
  CONSTRAINT [adr_uk] UNIQUE NONCLUSTERED
 (
-	[adr_name] ASC
+	[adr_type],[adr_name] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -367,10 +367,10 @@ GO
 CREATE TABLE [dbo].[inventory_positions](
 	[iv_id] [int] NOT NULL IDENTITY,
 	[iv_building] VARCHAR(255) NOT NULL,
-	[iv_room] VARCHAR(255) NOT NULL,
-	[iv_row] VARCHAR(255) NOT NULL,
-	[iv_shelf] VARCHAR(255) NOT NULL,
-	[iv_position] VARCHAR(255) NOT NULL,
+	[iv_room] VARCHAR(255) NULL,
+	[iv_row] VARCHAR(255) NULL,
+	[iv_shelf] VARCHAR(255) NULL,
+	[iv_position] VARCHAR(255)NULL,
 	[iv_description] VARCHAR(255) NULL,
 	[iv_deleted]  INT NULL ,
 	[iv_date_inserted]  DATETIME NOT NULL ,
@@ -385,7 +385,7 @@ CREATE TABLE [dbo].[inventory_positions](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY],
  CONSTRAINT [iv_uk] UNIQUE NONCLUSTERED 
 (
-	[iv_building], [iv_room], [iv_row], [iv_shelf], [iv_position] ASC
+	[iv_building] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

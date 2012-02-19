@@ -83,6 +83,12 @@
     <Compile Include="UI\ArticleDataUI.xaml.cs">
       <DependentUpon>ArticleDataUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\ArticleGroupDataUI.xaml.cs">
+      <DependentUpon>ArticleGroupDataUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryPositionDataUI.xaml.cs">
+      <DependentUpon>InventoryPositionDataUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainFrameUI.xaml.cs">
       <DependentUpon>MainFrameUI.xaml</DependentUpon>
     </Compile>
@@ -90,11 +96,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UI\SupplierDataUI.xaml.cs">
+      <DependentUpon>SupplierDataUI.xaml</DependentUpon>
+    </Compile>
     <Page Include="UI\ArticleDataUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\ArticleGroupDataUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InventoryPositionDataUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\MainFrameUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SupplierDataUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

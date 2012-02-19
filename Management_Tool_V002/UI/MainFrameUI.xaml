@@ -15,9 +15,9 @@
             </TreeViewItem>
             <TreeViewItem Header="Lagerverwaltung" FontSize="18" FontWeight="Bold">
                 <TreeViewItem Header="Artikel" FontSize="16" FontWeight="DemiBold" Name="ShowArticleData"  Selected="SelectedShowArticleData"/>
-                <TreeViewItem Header="Artikelgruppe" FontSize="16" FontWeight="DemiBold"/>
-                <TreeViewItem Header="Lager Position" FontSize="16" FontWeight="DemiBold"/>
-                <TreeViewItem Header="Lieferanten" FontSize="16" FontWeight="DemiBold"/>
+                <TreeViewItem Header="Artikelgruppe" FontSize="16" FontWeight="DemiBold" Name="ShowArticleGroupData" Selected="ShowArticleGroupData_Selected"/>
+                <TreeViewItem Header="Lager Position" FontSize="16" FontWeight="DemiBold" Name="showInventoryPositionData" Selected="showInventoryPosition_Selected"/>
+                <TreeViewItem Header="Lieferanten" FontSize="16" FontWeight="DemiBold" Name="showSupplierData" Selected="showSupplierData_Selected"/>
             </TreeViewItem>
             <TreeViewItem Header="Partner" FontSize="18" FontWeight="Bold">
                 <TreeViewItem Header="ansehen" FontSize="16" FontWeight="DemiBold"/>
